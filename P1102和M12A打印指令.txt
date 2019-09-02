@@ -1,0 +1,26 @@
+gs -q -dBATCH -dSAFER -dNOPAUSE -dQUIET  -sPAPERSIZE=a4 -r600x600 -sDEVICE=pbmraw -sOutputFile=/cache/xtmp.pbm 000.pdf
+gs -q -dBATCH -dSAFER -dNOPAUSE -dQUIET  -sPAPERSIZE=a4 -r600x600 -sDEVICE=pbmraw -sOutputFile=/cache/xtmp.pbm LT1167.pdf
+
+foo2zjs -z2 -p9 -r600x600 /cache/xtmp.pbm   > /dev/usb/lp0
+foo2zjs -z2 /cache/xtmp.pbm   > /dev/usb/lp0
+foo2zjs -z1 -p9 -r600x600 /cache/xtmp.pbm   > /dev/usb/lp0
+foo2zjs -z2 -p9 -D 4 -r600x600 /cache/xtmp.pbm   > /dev/usb/lp0
+
+
+/// success
+foo2zjs -P -z2 -L0 -p9 -r600x600 /cache/xtmp.pbm   > /dev/usb/lp0
+foo2zjs -P -z2 -p9 -r600x600 /cache/xtmp.pbm   > /dev/usb/lp0
+foo2zjs -P -z2 -p9 -r600x600 /cache/xtmp.pbm   > /dev/usb/lp0
+foo2zjs -P -z2 -p9 /cache/xtmp.pbm   > /dev/usb/lp0
+
+
+
+
+Laserjet P1102w, Laserjet  Pro M12A测试代码
+gs -q -dBATCH -dSAFER -dNOPAUSE -dQUIET  -sPAPERSIZE=a4 -r1200x600 -sDEVICE=pbmraw -sOutputFile=/cache/xtmp.pbm LT1167.pdf
+foo2zjs -P -z2 -p9 -r600x600 /cache/xtmp.pbm   > /dev/usb/lp0
+
+
+
+
+
